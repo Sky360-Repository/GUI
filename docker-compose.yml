@@ -1,0 +1,71 @@
+version: "3"
+
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nz01
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/backend
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
+    networks:
+      - djangonetwork
+  web:
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    container_name: dz01
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/backend
+    expose:
+      - "8000"
+    links:
+      - redis
+    env_file:
+      - ./.envs/.django
+    networks:
+      - djangonetwork
+  db:
+    build:
+      context: .
+      dockerfile: compose/postgres/Dockerfile
+    container_name: pz01
+    env_file:
+      - ./.envs/.postgres
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data
+      - local_postgres_data_backups:/backups
+    networks:
+      - djangonetwork
+  redis:
+    image: redis:alpine
+    container_name: rz01
+    ports:
+      - "6379:6379"
+    networks:
+      - djangonetwork
+  frontend:
+    restart: always
+    command : npm start
+    container_name: front
+    build:
+      context: .
+      dockerfile: compose/frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    networks:
+      - djangonetwork
+
+networks:
+  djangonetwork:
+    driver: bridge
