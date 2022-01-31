@@ -1,10 +1,10 @@
 
 FROM node:17.4.0-alpine
 
-WORKDIR /app/frontend
-
-COPY package.json package-lock.json ./
+RUN mkdir /app/
+WORKDIR /app/
+ADD package.json /app/package.json
 RUN npm install
-RUN npm run start
-COPY . ./
-EXPOSE 3000
+ADD . /app/
+
+CMD ["npm", "run", "start"]
