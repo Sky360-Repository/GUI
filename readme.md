@@ -1,7 +1,7 @@
 ## Basic Usage
-1. [Install Docker](https://www.docker.com/products/docker-desktop)
+1. [Install Docker](https://www.docker.com/products/docker-desktop) and ensure it is running.
 2. clone this repository
-3. Run **`docker-compose build`** inside the root directory .
+3. Run **`docker-compose build`** inside the root directory.
 4. Run **`docker-compose up -d`** to start up the project.
 
 ## Development
@@ -11,7 +11,7 @@
 
 
 ## Commands
-These commands are used to run this project. You should only need numbers 1-4.
+These Make commands can also be used if your machines supports Make. You should only need numbers 1-4.
 
 1. `make up` to build the project and starting containers.
 2. `make build` to build the project.
