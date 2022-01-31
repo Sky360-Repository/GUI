@@ -4,7 +4,10 @@
 3. Then run **`make up`** to start up the project for first time.
 4. Use/update environment variables from **`.envs`** folder.
 
-Checkout the [commands](#commands) section for more usage.
+## Development
+Visit http://localhost:8000 to see the root URL of the django app.
+Visit http://localhost:3000 to see the react app.
+Visit http://localhost:8888 will give you logs for each container.
 
 ## Commands
 To use this project, run this commands:
