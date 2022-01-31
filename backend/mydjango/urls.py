@@ -18,12 +18,12 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
-from myapp.views import ShowHelloWorld
+from myapp.views import ShowHelloWorld, ShowGUI
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^gui', ShowHelloWorld.as_view()),
+    url(r'^gui', ShowGUI.as_view()),
     url(r'^$', ShowHelloWorld.as_view())
 ]
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

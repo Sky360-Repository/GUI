@@ -56,10 +56,10 @@ services:
   frontend:
     restart: always
     command : npm start
-    container_name: front
+    container_name: fe01
     build:
-      context: .
-      dockerfile: compose/frontend/Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     stdin_open: true

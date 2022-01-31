@@ -17,3 +17,6 @@ class ShowHelloWorld(TemplateView):
         context['demo_content'] = DemoModel.objects.all()
         context['version'] = get_version()
         return context
+
+class ShowGUI(TemplateView):
+    template_name = 'gui.html'
