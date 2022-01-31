@@ -1,3 +1,5 @@
+
+{% load static %}
 <head>
     <title>My Django Project</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +23,7 @@
         <p>There you will see
             <b>Printing Hello from Celery</b>, which is printed from celery method.</p>
         <p>Redis was used as broker for Celery.</p>
+        <button id="click">React Test</button>
         </div>
 
     </center>
@@ -28,4 +31,5 @@
 
 <footer>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'myapp/build/main.js' %}"></script>
 </footer>

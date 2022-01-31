@@ -1,4 +1,4 @@
-{% load render_bundle from webpack_loader %}
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,6 +12,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    {% render_bundle 'main' 'js' 'DEFAULT' %}
+    <script src="{% static 'js/bundle.js' %}"></script>
   </body>
 </html>

@@ -7,11 +7,11 @@ ENV PYTHONUNBUFFERED 1
 ENV C_FORCE_ROOT true
 
 # Making source and static directory
-RUN mkdir /backend
+RUN mkdir /src
 RUN mkdir /static
 
 # Creating Work Directory
-WORKDIR /backend
+WORKDIR /src
 
 # Adding mandatory packages to docker
 RUN apk update && apk add --no-cache \
@@ -43,7 +43,7 @@ RUN pip install --upgrade pip
 # RUN pip3 install --no-cache-dir --disable-pip-version-check scipy==1.3.1
 
 # Installing requirements.pip from project
-COPY ./backend/requirements.pip /scripts/
+COPY ./src/requirements.pip /scripts/
 RUN pip install --no-cache-dir -r /scripts/requirements.pip
 
 # *install psycopg2 if you don't have it requirements.pip*
