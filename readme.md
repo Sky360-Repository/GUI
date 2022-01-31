@@ -1,8 +1,8 @@
 ## Basic Usage
-1. Install Docker
-2. Run **`make build`** inside root directory.
-3. Then run **`make up`** to start up the project for first time.
-4. Use/update environment variables from **`.envs`** folder.
+1. [Install Docker](https://www.docker.com/products/docker-desktop)
+2. clone this repository
+3. Run **`docker-compose build`** inside the root directory .
+4. Run **`docker-compose up -d`** to start up the project.
 
 ## Development
 - Visit http://localhost:8000 to see the root URL of the django app.
