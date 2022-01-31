@@ -5,12 +5,13 @@
 4. Use/update environment variables from **`.envs`** folder.
 
 ## Development
-Visit http://localhost:8000 to see the root URL of the django app.
-Visit http://localhost:3000 to see the react app.
-Visit http://localhost:8888 will give you logs for each container.
+- Visit http://localhost:8000 to see the root URL of the django app.
+- Visit http://localhost:3000 to see the react app.
+- Visit http://localhost:8888 will give you logs for each container.
+
 
 ## Commands
-To use this project, run this commands:
+These commands are used to run this project. You should only need numbers 1-4.
 
 1. `make up` to build the project and starting containers.
 2. `make build` to build the project.
