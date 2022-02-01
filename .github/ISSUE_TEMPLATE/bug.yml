@@ -22,13 +22,7 @@ body:
       description: |
         If possible please include a *minimal* reproduction case with source code, configuration file, any other information about how you're using the gui. You can use Markdown in this field.
       value: |
-        <details>
-        <summary>Configuration</summary>
-
-        ```
-        <!-- Paste your configuration here -->
-        ```
-        </details>
+        details
     validations:
       required: false
   - type: textarea
