@@ -4,7 +4,6 @@ title: "New Feature: (fill in)"
 labels:
   - feature
 body:
-- type: markdown
 - type: textarea
   attributes:
     label: Explain the feature
