@@ -2,9 +2,8 @@
 name: "\U0001F41E Report a problem"
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+labels:
+  - bug
 body:
   - type: markdown
     attributes:
@@ -18,33 +17,27 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-- type: textarea
-  attributes:
-    label: What did you do?
-    description: |
-      If possible please include a *minimal* reproduction case with source code, configuration file, any other information about how you're using the gui. You can use Markdown in this field.
-    value: |
-      <details>
-      <summary>Configuration</summary>
-
-      ```
-      <!-- Paste your configuration here -->
-      ```
-      </details>
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: What did you expect to happen?
-    description: |
-      You can use Markdown in this field.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: What actually happened?
-  validations:
-    required: true
+  - type: textarea
+    attributes:
+      label: What did you do?
+      description: |
+        If possible please include a *minimal* reproduction case with source code, configuration file, any other information about how you're using the gui. You can use Markdown in this field.
+      value: |
+        details
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: What did you expect to happen?
+      description: |
+        You can use Markdown in this field.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What actually happened?
+    validations:
+      required: true
   - type: dropdown
     id: browsers
     attributes:
