@@ -1,0 +1,17 @@
+name: "\U0001F680 Propose a new core rule"
+description: "Propose a new feature for the gui application"
+title: "New Feature: (fill in)"
+labels:
+  - feature
+body:
+- type: markdown
+- type: textarea
+  attributes:
+    label: Explain the feature
+    description: Please let us know what you want, and how this can help our end users
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional comments
+    description: Is there anything else that's important for the team to know?
