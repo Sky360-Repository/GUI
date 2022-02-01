@@ -1,5 +1,4 @@
 import { useState  } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import VideoPlayer from 'react-video-player-extended';
 
@@ -12,7 +11,7 @@ function App() {
   return (
     <div className="App" style={{width: '100%', display: 'flex', justifyContent: 'center' }}>
       <VideoPlayer
-        url="http://localhost:8000/static/videos/unknown1.mp4"
+        url="http://localhost:8000/static/videos/unknown1.mp4s"
         fps={10}
         height="auto"
         width={840}
