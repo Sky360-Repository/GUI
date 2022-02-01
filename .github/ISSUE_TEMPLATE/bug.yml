@@ -16,43 +16,43 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-- type: textarea
-  attributes:
-    label: What did you do?
-    description: |
-      If possible please include a *minimal* reproduction case with source code, configuration file, any other information about how you're using the gui. You can use Markdown in this field.
-    value: |
-      <details>
-      <summary>Configuration</summary>
-
-      ```
-      <!-- Paste your configuration here -->
-      ```
-      </details>
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: What did you expect to happen?
-    description: |
-      You can use Markdown in this field.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: What actually happened?
-  validations:
-    required: true
-  - type: dropdown
-    id: browsers
+  - type: textarea
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+      label: What did you do?
+      description: |
+        If possible please include a *minimal* reproduction case with source code, configuration file, any other information about how you're using the gui. You can use Markdown in this field.
+      value: |
+        <details>
+        <summary>Configuration</summary>
+
+        ```
+        <!-- Paste your configuration here -->
+        ```
+        </details>
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: What did you expect to happen?
+      description: |
+        You can use Markdown in this field.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What actually happened?
+    validations:
+      required: true
+    - type: dropdown
+      id: browsers
+      attributes:
+        label: What browsers are you seeing the problem on?
+        multiple: true
+        options:
+          - Firefox
+          - Chrome
+          - Safari
+          - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
