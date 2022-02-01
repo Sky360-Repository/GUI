@@ -34,6 +34,9 @@ STATICFILES_DIRS = [
 
 # Application definition
 
+CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ['*']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +50,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # at some points we need to configure the cors allowed origins
+    # https://stackoverflow.com/questions/44037474/cors-error-while-consuming-calling-rest-api-with-react
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
